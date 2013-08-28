@@ -712,18 +712,21 @@ input[type="text"],
 input[type="password"] {
   display: block;
   margin: 0.5rem auto 0;
+  background-color: transparent;
 }
 input[type="checkbox"] {
   margin-left: 1rem;
   margin-right: 0.5rem;
 }
 .section {
-  padding: 0 0 1rem;
-  margin-bottom: 1rem;
   display: block;
 }
 .section.last {
   border: none;
+}
+.section.last .body {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
 }
 .section.first .opening {
   border-top-left-radius: 2px;
@@ -749,10 +752,9 @@ input[type="checkbox"] {
 }
 .section .opening {
   background-color: #f0f5f5;
-  border-top: 1px solid #E8EBEA;
   border-bottom: 1px solid #DCE2E2;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 .section .opening .header {
   text-shadow: 0 1px 0 #ffffff;
@@ -779,32 +781,44 @@ input[type="checkbox"] {
   display: none;
 }
 .section .divider {
-  width: 100%;
   text-align: center;
   position: relative;
   margin: 1rem 0;
 }
 .section .divider .text {
-  background-color: white;
   position: relative;
   z-index: 1;
   padding: 0 1rem;
 }
 .section .divider .line {
-  width: 80%;
+  width: 37.5%;
   height: 50%;
   border-bottom: 1px solid #aebdbc;
   display: block;
   position: absolute;
   top: 0;
-  left: 10%;
+}
+.section .divider .line.left {
+  left: 1.5rem;
+}
+.section .divider .line.right {
+  right: 1.5rem;
 }
 .section .body {
+  background-image: -webkit-linear-gradient(top, #ffffff, #fdfaf7);
+  border-bottom: 1px solid #FFF;
   padding-top: 0.5rem;
+  padding-bottom: 3rem;
+  display: block;
 }
 .section .body h1,
 .section .body p {
   padding: 0 1rem 0;
+}
+.section .message h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
 }
 #wrapper {
   padding-top: 2rem;
@@ -818,7 +832,7 @@ input[type="checkbox"] {
   min-height: 50%;
   display: block;
   margin: 0;
-  padding: 0 0 1rem;
+  padding: 0;
   border-radius: 2px;
 }
 #sign_in,
@@ -830,4 +844,99 @@ input[type="checkbox"] {
 #guest {
   width: 100%;
   text-align: center;
+}
+#confirmation {
+  text-align: left;
+}
+#confirmation .rsvp {
+  display: block;
+  box-shadow: 0 5px 10px 0 rgba(71, 149, 242, 0.5);
+}
+#confirmation .rsvp.event {
+  border-top: 3px solid #C2F4FF;
+  margin: 1rem 2rem;
+}
+#confirmation .rsvp.event .main {
+  background-color: #0fd4ff;
+  padding-bottom: 1.5rem;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+#confirmation .rsvp.event .main .divider {
+  color: #C2F4FF;
+}
+#confirmation .rsvp.event .main .divider .line {
+  border-bottom: 1px dotted #C2F4FF;
+  width: 40%;
+}
+#confirmation .rsvp.event .main .divider .line.left {
+  left: 5%;
+}
+#confirmation .rsvp.event .main .divider .line.right {
+  right: 5%;
+}
+#confirmation .rsvp.event h2 {
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: left;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  color: #C2F4FF;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted #C2F4FF;
+}
+#confirmation .rsvp .what {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+#confirmation .rsvp .when {
+  font-size: 1rem;
+  padding-top: 1rem;
+}
+#confirmation .rsvp .where {
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+#confirmation .rsvp .where img {
+  float: left;
+  width: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+}
+#confirmation .rsvp .where .name {
+  display: block;
+  font-weight: 600;
+}
+#confirmation .rsvp .who img {
+  float: left;
+  width: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+#confirmation .rsvp .who span {
+  display: block;
+}
+#confirmation .rsvp .who .name {
+  font-weight: 600;
+}
+#confirmation .rsvp .logistics {
+  padding-bottom: 1rem;
+}
+#confirmation .rsvp .how {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dotted #C2F4FF;
+  margin-bottom: 0.5rem;
+}
+#confirmation .rsvp .how .total {
+  font-weight: 600;
+  float: right;
+}
+#confirmation .rsvp .fine_print {
+  border-top: 1px dotted #C2F4FF;
+  background-color: white;
+  padding: 1rem 0;
+  font-size: 0.6rem;
 }
