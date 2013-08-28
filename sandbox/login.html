@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+<head>
+	<title>Bazaarboy | Log-In</title>
+	<link rel="stylesheet" type="text/css" href="../_/css/login.css">
+	<script type="text/javascript">
+		window.onload = function() {
+			var nav = document.getElementById('navigation');
+			nav.addEventListener('mouseover', toggleNav, false);
+			nav.addEventListener('mouseout', toggleNav, false);
+
+			cancelActions();
+		}
+
+		replaceContent = function(str) {
+			document.getElementById('action_content').innerHTML = str;
+		}
+
+		startSignIn = function(e) {
+			replaceContent('<h1>Welcome Back!</h1><hr/><p>Are you a vendor? If so, sign-in <a href="">here</a>.</p><button class="facebook">Sign In with Facebook</button><br/>or<br/><br/><input type="text" placeholder="email address"></input><input type="password" placeholder="password"></input>');
+			document.getElementById('actions').innerHTML = '<button class="left one-col cancel">« Back</button><button class="right two-col">Sign In</button>';
+		}
+
+		startRegister = function(e) {
+			replaceContent('<h1>Welcome to Bazaarboy</h1><hr/><p>Are you a vendor? If so, register <a href="">here</a>.</p><button onclick="registerWithFB()" class="facebook">Register with Facebook</button><br/>or<br/><br/><input type="text" placeholder="email address"></input><input type="text" placeholder="first name"></input><input type="text" placeholder="last name"></input><input type="password" placeholder="password"></input><input type="password" placeholder="confirm password"></input>');
+			document.getElementById('actions').innerHTML = '<button class="left one-col cancel">« Back</button><button class="right two-col">Register</button>';
+		}
+
+		registerWithFB = function(e) {
+			replaceContent('<h1>Almost There</h1><hr/><p>We Still Need A Valid Email Address for Event Receipts</p><form><input type="text" placeholder="email address"></input></form>');
+		}
+
+		cancelActions = function(e) {
+			replaceContent('<p id="opening"><span class="image ss-globe"></span><b>Bazaarboy is</b> sed posuere consectetur est at lobortis. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>');
+		}
+
+		toggleNav = function(e) {
+			var classes= document.body.classList;
+			if (e.type == "mouseover") {
+				classes.add('expanded');
+			} else {
+				classes.remove('expanded');
+			}
+		}
+	</script>
+	<script type="text/javascript" src="//use.typekit.net/gjc0hvy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+	<div id="top_bar">
+		<div class="icon med ss-globe"></div>
+		<div class="logotype">
+			<p>BAZAARBOY</p>
+		</div>
+	</div>
+	<div id="navigation">
+		<div class="top nav cf">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Adipiscing Ipsum Sit</p>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Consectetur Vestibulum</p>
+			</div>
+		</div>
+		<div class="bottom nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Cursus Ligula Venenatis Commodo</p>
+			</div>
+		</div>
+	</div>
+	<div id="headline">
+		<!-- <h1 class="six-col cf">Bazaarboy</h1> -->
+		<div class="six-col cf">
+			<div id="action_content">
+
+			</div>
+			<hr/>
+
+			<div id="actions" class="five-col cf">
+				<button onclick="startSignIn()" class="left two-col">Sign In</button>
+				<p>or</p>
+				<button onclick="startRegister()" class="right two-col cancel">Register</button>
+			</div>
+		</div>
+	</div>
+	<div id="color_grade">
+	</div>
+	<div id="hero_image"></div>
+<!-- 	<div id="login">
+		<form class="threeD six-col">
+			<h2>Welcome to Bazaarboy</h2>
+			<input class="five-col" type="text" placeholder="email"></input>
+			<input class="five-col" type="password" placeholder="password"></input>
+			<button id="sign_in">Sign In</button> or <button id="register" class="facebook">Sign In with Facebook</button>
+			<hr/>
+			<p>are you an organizer, vendor, or business? <a href="">sign in here</a>.</p>
+		</form>
+	</div> -->
+</body>
+</html>

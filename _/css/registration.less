@@ -1,0 +1,203 @@
+@PRIMARY: salmon;//aquamarine;
+@SECONDARY: mediumaquamarine;
+@TERTIARY:gold;
+@QUATERNARY:white;
+
+* {
+	margin:0;
+	padding:0;
+}
+
+html, body {
+	width:100%;
+	height:100%;
+}
+
+html {
+	font-size:100%;
+}
+
+body {
+	background-color:@PRIMARY;
+	font-size:1rem;
+	font-family:Georgia;
+	color:@SECONDARY;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+#registration_form {
+	border: 1px solid @TERTIARY;
+	width:75%;
+	height:75%;
+	margin:3rem auto 0;
+	display:block;
+	position:relative;
+	input {
+		font-family:Georgia;
+		&[type="textfield"] {
+			background-color:@TERTIARY;
+			border:2px solid @TERTIARY;
+			padding:0.5rem;
+			font-size:1rem;
+			font-style:oblique;
+			color:@QUATERNARY;
+			margin:0.5rem 0.25rem;
+		}
+		&[type="submit"] {
+			font-family:Georgia;
+			background-color:@QUATERNARY;
+			border:2px solid @TERTIARY;
+			color:@TERTIARY;
+			padding:0.5rem;
+			font-style:oblique;
+			font-size:1rem;
+			margin:0.5rem 0.25rem;
+		}
+	}
+	button {
+		font-family:Georgia;
+		background-color:@QUATERNARY;
+		border:2px solid @TERTIARY;
+		color:@TERTIARY;
+		padding:0.5rem;
+		font-style:oblique;
+		font-size:1rem;
+		margin:0.5rem 0.25rem;
+	}
+	.social button {
+		color:@QUATERNARY;
+		border-color:@SECONDARY;
+		background-color:@SECONDARY;
+	}
+	& > div {
+		float:left;
+		padding:10% 2.5% 0;
+		height:85.125%;
+		display:block;
+	}
+	#login {
+		-webkit-animation:OPA_WID 1s 1 reverse;
+		width:45%;
+		position:absolute;
+		left:0;
+		// border-right:1px solid @QUATERNARY;
+		& > div {
+			  width:75%;
+			  margin:auto;
+			  display:none;
+		}
+		.direct {
+		}
+		.social {
+		}
+		&:hover {
+			z-index:1;
+			-webkit-animation:OPA_WID 1s 1;
+			width:65%;
+			background-color:@QUATERNARY;
+			& > div {
+				display:block;
+			}
+			.direct {
+			}
+			.social {
+			}
+			&::after {
+				top:5%;
+			}
+		}
+		&::after {
+			position:absolute;
+			top:40%;
+			right:0;
+			left:0;
+			text-align:center;
+			content: 'Login';
+			color:@TERTIARY;
+			font-size:3rem;
+		}
+	}
+	#register {
+		-webkit-animation:OPA_WID 1s 1 reverse;
+		width:45%;
+		position:absolute;
+		right:0;
+		border-left:1px solid @TERTIARY;
+		& > div {
+			  width:75%;
+			  margin:auto;
+			  display:none;
+		}
+		.direct {
+		}
+		.social {
+		}
+		.vendor {
+			font-style:oblique;
+			p {
+				display:inline;
+				padding-bottom:0.25rem;
+				border-bottom:1px dotted @SECONDARY;
+			}
+		}
+		&:hover {
+			z-index:1;
+			-webkit-animation:OPA_WID 1s 1;
+			width:65%;
+			background-color:@QUATERNARY;
+			& > div {
+				display:block;
+			}
+			.direct {
+			}
+			.social {
+			}
+			.vendor {
+			}
+			&::after {
+				top:5%;
+			}
+		}
+		&::after {
+			position:absolute;
+			top:40%;
+			bottom:40%;
+			left:0;
+			right:0;
+			content:'Register';
+			text-align:center;
+			color:@TERTIARY;
+			font-size:3rem;
+		}
+
+	}
+}
+@-webkit-keyframes OPA_WID {
+	0%   {
+		opacity: 0;
+	 	width:50%;
+	 	background-color:transparent;
+	 }
+	 100% {
+	 	opacity: 1;
+	 	width:65%;
+	 	background-color:@QUATERNARY;
+	 }
+}

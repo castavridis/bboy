@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+<head>
+	<title></title>
+	<link type="text/css" rel="stylesheet" href="../_/css/cover.css"/>
+	<script type="text/javascript">
+		window.onload = function() {
+			var nav = document.getElementById('navigation');
+			nav.addEventListener('mouseover', toggleNav, false);
+			nav.addEventListener('mouseout', toggleNav, false);
+		}
+
+		toggleNav = function(e) {
+			var classes= document.body.classList;
+			if (e.type == "mouseover") {
+				classes.add('expanded');
+			} else {
+				classes.remove('expanded');
+			}
+		}
+	</script>
+	<script type="text/javascript" src="//use.typekit.net/gjc0hvy.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+	<div id="top_bar">
+		<div class="icon med ss-globe"></div>
+		<div class="logotype">
+			<p>BAZAARBOY</p>
+		</div>
+		<div class="search">
+			<input type="textfield" placeholder="type and press enter."></input>
+			<div class="icon med ss-search"></div>
+		</div>
+	</div>
+	<div id="navigation">
+		<div class="top nav cf">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Adipiscing Ipsum Sit</p>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Consectetur Vestibulum</p>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Amet Nullam Fusce</p>
+			</div>
+		</div>
+		<div class="sub">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Vestibulum Mollis Ligula</p>
+			</div>
+		</div>
+		<div class="sub">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Mollis</p>
+			</div>
+		</div>
+		<div class="sub">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Magna Cras</p>
+			</div>
+		</div>
+		<div class="nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Cursus Nibh Risus</p>
+			</div>
+		</div>
+		<div class="bottom nav">
+			<div class="icon"></div>
+			<div class="name">
+				<p>Cursus Ligula Venenatis Commodo</p>
+			</div>
+		</div>
+	</div>
+	<div class="cover">
+		<div class="headline">
+			<p class="eight-col cf">Curabitur blandit tempus porttitor.</p>
+		</div>
+	</div>
+<!-- 	<div class="content eight-col cf">
+		<div class="two-col"></div>
+		<div class="one-col"></div>
+	</div> -->
+	<div class="content RSVP eight-col cf">
+		<div class="navigation two-col left">
+			<div class="nav">
+				<p>Step One</p>
+			</div>
+			<div class="nav">
+				<p>Step Two</p>
+			</div>
+			<div class="nav">
+				<p>Step Three</p>
+			</div>
+		</div>
+		<div id="login" class="six-col right">
+			<form class="threeD">
+				<h2>Sign In to Bazaarboy</h2>
+				<input class="five-col" type="text" placeholder="email"></input>
+				<input class="five-col" type="password" placeholder="password"></input>
+				<button type="submit">Sign In</button> or <button class="facebook">Sign In with Facebook</button>
+				<hr/>
+				<p>not a member? <a href="">register</a></p>
+			</form>
+			<form>
+			  <fieldset>
+				<legend>Step One</legend>
+				<span class="help-block">Example block-level help text here. Sed posuere consectetur est at lobortis. Maecenas sed diam eget risus varius blandit sit amet non magna.</span><br/>
+				<label>Regular Field</label>
+				<input class="three-col" type="text" placeholder="Type something…"><br/>
+				<label>Selected Field</label>
+				<input class="selected three-col"  type="text" placeholder="Type something…"><br/>
+				<label>Required <span class="required">*</span></label>
+				<input class="three-col"  type="text" placeholder="Type something…"><br/>
+				<label class="required">Required Error</label>
+				<input  class="three-col required"  type="text" placeholder="Type something…"><br/>
+				<label>Disabled Field</label>
+				<input class="three-col" id="disabledInput" type="text" placeholder="Type Something..." disabled><br/>
+				<select>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				  <option>5</option>
+				</select><br/>
+
+				<label class="checkbox">
+				  <input type="checkbox"> Check me out
+				</label><br/>
+				<label class="radio">
+				  <input type="radio"> Check me out
+				</label><br/>
+				<label>Textarea</label>
+				<textarea class="four-col" placeholder="Type something..."></textarea><br/>
+				<button type="submit" class="btn">Submit</button>
+				<button class="btn fundraiser">Fundraiser</button>
+				<button class="btn event">Event</button>
+				<button class="btn cancel">Cancel</button>
+			  </fieldset>
+			</form>
+			<div class="icon btn selected lrg ss-tag">
+			</div>Large Icon Button Selected
+			<div class="icon btn unselected lrg ss-tag">
+			</div>Large Icon Button Unselected
+			<div class="icon btn disabled lrg ss-tag">
+			</div> Large Icon Button Disabled
+			<div class="icon btn unselected disabled lrg ss-tag">
+			</div> Large Icon Button Disabled
+			<div class="icon btn med ss-tag">
+			</div>
+			Medium Icon Button
+			<div class="icon btn sml ss-tag">
+			</div>
+			Small Icon Button
+			<div class="icon btn x-sml ss-tag">
+			</div>
+			Extra-Small Icon Button
+		</div>
+	</div>
+	<div class="recommendations">
+		<div class="one-col"></div>
+		<div class="one-col"></div>
+		<div c;ass="one-col"></div>
+	</div>
+	<div class="footer"></div>
+</body>
+</html>

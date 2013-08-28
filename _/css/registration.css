@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html {
+  font-size: 100%;
+}
+body {
+  background-color: #fa8072;
+  font-size: 1rem;
+  font-family: Georgia;
+  color: #66cdaa;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+
+  display: table;
+  /* 2 */
+
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+#registration_form {
+  border: 1px solid #ffd700;
+  width: 75%;
+  height: 75%;
+  margin: 3rem auto 0;
+  display: block;
+  position: relative;
+}
+#registration_form input {
+  font-family: Georgia;
+}
+#registration_form input[type="textfield"] {
+  background-color: #ffd700;
+  border: 2px solid #ffd700;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-style: oblique;
+  color: #ffffff;
+  margin: 0.5rem 0.25rem;
+}
+#registration_form input[type="submit"] {
+  font-family: Georgia;
+  background-color: #ffffff;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  padding: 0.5rem;
+  font-style: oblique;
+  font-size: 1rem;
+  margin: 0.5rem 0.25rem;
+}
+#registration_form button {
+  font-family: Georgia;
+  background-color: #ffffff;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  padding: 0.5rem;
+  font-style: oblique;
+  font-size: 1rem;
+  margin: 0.5rem 0.25rem;
+}
+#registration_form .social button {
+  color: #ffffff;
+  border-color: #66cdaa;
+  background-color: #66cdaa;
+}
+#registration_form > div {
+  float: left;
+  padding: 10% 2.5% 0;
+  height: 85.125%;
+  display: block;
+}
+#registration_form #login {
+  -webkit-animation: OPA_WID 1s 1 reverse;
+  width: 45%;
+  position: absolute;
+  left: 0;
+}
+#registration_form #login > div {
+  width: 75%;
+  margin: auto;
+  display: none;
+}
+#registration_form #login:hover {
+  z-index: 1;
+  -webkit-animation: OPA_WID 1s 1;
+  width: 65%;
+  background-color: #ffffff;
+}
+#registration_form #login:hover > div {
+  display: block;
+}
+#registration_form #login:hover::after {
+  top: 5%;
+}
+#registration_form #login::after {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  content: 'Login';
+  color: #ffd700;
+  font-size: 3rem;
+}
+#registration_form #register {
+  -webkit-animation: OPA_WID 1s 1 reverse;
+  width: 45%;
+  position: absolute;
+  right: 0;
+  border-left: 1px solid #ffd700;
+}
+#registration_form #register > div {
+  width: 75%;
+  margin: auto;
+  display: none;
+}
+#registration_form #register .vendor {
+  font-style: oblique;
+}
+#registration_form #register .vendor p {
+  display: inline;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dotted #66cdaa;
+}
+#registration_form #register:hover {
+  z-index: 1;
+  -webkit-animation: OPA_WID 1s 1;
+  width: 65%;
+  background-color: #ffffff;
+}
+#registration_form #register:hover > div {
+  display: block;
+}
+#registration_form #register:hover::after {
+  top: 5%;
+}
+#registration_form #register::after {
+  position: absolute;
+  top: 40%;
+  bottom: 40%;
+  left: 0;
+  right: 0;
+  content: 'Register';
+  text-align: center;
+  color: #ffd700;
+  font-size: 3rem;
+}
+@-webkit-keyframes OPA_WID {
+  0% {
+    opacity: 0;
+    width: 50%;
+    background-color: transparent;
+  }
+  100% {
+    opacity: 1;
+    width: 65%;
+    background-color: #ffffff;
+  }
+}
