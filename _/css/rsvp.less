@@ -1,0 +1,160 @@
+@GREY: #d7e9e9;
+
+html, body {
+	width:100%;
+	height:100%;
+}
+body {
+	background-color:transparent;
+}
+
+.btn {
+	padding:auto!important;
+}
+
+a {
+	.WEB_ITA;
+	color:@ORANGE;
+}
+
+input {
+	&[type="text"], &[type="password"] {
+		display:block;
+		margin:0.5rem auto 0;
+	}
+	&[type="button"] {
+
+	}
+	&[type="radio"] {
+
+	}
+	&[type="checkbox"] {
+		margin-left:1rem;
+		margin-right:0.5rem;
+	}
+}
+
+.section {
+	padding:0 0 1rem;
+	margin-bottom:1rem;
+	display:block;
+	&.last {
+		border:none;
+	}
+	&.first {
+		.opening {
+			border-top-left-radius: @RADIUS;
+			border-top-right-radius: @RADIUS;
+		}
+	}
+	&.collapsed {
+		.opening {
+			padding:0.5rem 1rem;
+			margin-bottom:0;
+		}
+		.header {
+			text-shadow: 0 1px 0 rgba(255,255,255,1);
+			padding-bottom:0.125rem;
+			text-transform:uppercase;
+			display:block;
+			h2 {
+				font-size:1rem;
+				font-weight:400!important;
+			}
+		}
+		.copy, .body {
+			display:none!important;
+		}
+	}
+	.opening {
+		// color:white;
+		background-color:@LIGHT_NEUTRAL;
+		border-top:1px solid #E8EBEA;
+		border-bottom:1px solid #DCE2E2;
+		padding:1rem;
+		margin-bottom:1rem;
+		.header {
+			text-shadow: 0 1px 0 rgba(255,255,255,1);
+			padding-bottom:0.125rem;
+			text-transform:uppercase;
+			display:block;
+			h2 {
+				font-weight:300;
+			}
+		}
+		.copy {
+			.SANS;
+			display:block;
+			font-weight:300;
+		}
+	}
+	.conditional {
+		display:none;
+		margin-bottom:1rem;
+		&.visible {
+			display:block;
+		}
+		&.visible + * {
+			display:none;
+		}
+	}
+	.divider {
+		width:100%;
+		text-align:center;
+		position:relative;
+		margin:1rem 0;
+		.text {
+			background-color:white;
+			position:relative;
+			z-index:1;
+			padding:0 1rem;
+		}
+		.line {
+			width:80%;
+			height:50%;
+			border-bottom:1px solid @NEUTRAL;
+			display:block;
+			position:absolute;
+			top:0;
+			left:10%;
+		}
+	}
+	.body {
+		padding-top:0.5rem;
+		h1, p {
+			padding:0 1rem 0;
+		}
+	}
+}
+
+#wrapper {
+	padding-top:2rem;
+	display:block;
+	height:100%;
+	margin:0;
+}
+
+#modal {
+	background-color:white;
+	width:100%;
+	min-height:50%;
+	display:block;
+	margin:0;
+	padding:0 0 1rem;
+	border-radius:@RADIUS;
+}
+
+#user {
+
+}
+
+#sign_in, #register {
+	display:block;
+	text-align:center;
+	padding:0.5rem 0;
+}
+
+#guest {
+	width:100%;
+	text-align:center;
+}

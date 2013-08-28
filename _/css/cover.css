@@ -1,4 +1,18 @@
 @import url('../webfonts/ss-gizmo.css');
+.SANS {
+  font-family: 'rooney-sans', sans-serif;
+}
+.SANS_ITA {
+  font-family: 'rooney-sans', sans-serif;
+  font-style: oblique;
+}
+.WEB {
+  font-family: 'rooney-web', sans-serif;
+}
+.WEB_ITA {
+  font-family: 'rooney-web', sans-serif;
+  font-style: oblique;
+}
 * {
   margin: 0;
   padding: 0;
@@ -59,7 +73,7 @@ form.threeD hr {
   margin: 1rem 0;
 }
 form.threeD button {
-  margin: 0.5rem 0.75rem 0;
+  margin: 0.5rem 0.75rem 0!important;
 }
 form.threeD p {
   font-family: "rooney-web";
@@ -99,6 +113,7 @@ label .required {
 }
 input {
   font-family: "rooney-sans";
+  font-size: 0.8rem;
 }
 input[type="text"],
 input[type="password"],
@@ -121,7 +136,7 @@ textarea:focus,
 input[type="text"].selected,
 input[type="password"].selected,
 textarea.selected {
-  box-shadow: inset 0 0 5px #d7e9e9;
+  box-shadow: inset 0 0 5px #aebdbc;
   border: 1px solid #aebdbc;
 }
 input[type="text"].required,
@@ -135,7 +150,7 @@ textarea {
   display: block;
 }
 button {
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem!important;
   border-radius: 2px;
   border: 1px solid #ff8f4d;
   font-family: "rooney-sans";
@@ -676,4 +691,143 @@ select {
 }
 .RSVP .six-col {
   padding: 1rem 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background-color: transparent;
+}
+.btn {
+  padding: auto!important;
+}
+a {
+  font-family: 'rooney-web', sans-serif;
+  font-style: oblique;
+  color: #ff8f4d;
+}
+input[type="text"],
+input[type="password"] {
+  display: block;
+  margin: 0.5rem auto 0;
+}
+input[type="checkbox"] {
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+.section {
+  padding: 0 0 1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.section.last {
+  border: none;
+}
+.section.first .opening {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.section.collapsed .opening {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+}
+.section.collapsed .header {
+  text-shadow: 0 1px 0 #ffffff;
+  padding-bottom: 0.125rem;
+  text-transform: uppercase;
+  display: block;
+}
+.section.collapsed .header h2 {
+  font-size: 1rem;
+  font-weight: 400!important;
+}
+.section.collapsed .copy,
+.section.collapsed .body {
+  display: none!important;
+}
+.section .opening {
+  background-color: #f0f5f5;
+  border-top: 1px solid #E8EBEA;
+  border-bottom: 1px solid #DCE2E2;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.section .opening .header {
+  text-shadow: 0 1px 0 #ffffff;
+  padding-bottom: 0.125rem;
+  text-transform: uppercase;
+  display: block;
+}
+.section .opening .header h2 {
+  font-weight: 300;
+}
+.section .opening .copy {
+  font-family: 'rooney-sans', sans-serif;
+  display: block;
+  font-weight: 300;
+}
+.section .conditional {
+  display: none;
+  margin-bottom: 1rem;
+}
+.section .conditional.visible {
+  display: block;
+}
+.section .conditional.visible + * {
+  display: none;
+}
+.section .divider {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 1rem 0;
+}
+.section .divider .text {
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+}
+.section .divider .line {
+  width: 80%;
+  height: 50%;
+  border-bottom: 1px solid #aebdbc;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+.section .body {
+  padding-top: 0.5rem;
+}
+.section .body h1,
+.section .body p {
+  padding: 0 1rem 0;
+}
+#wrapper {
+  padding-top: 2rem;
+  display: block;
+  height: 100%;
+  margin: 0;
+}
+#modal {
+  background-color: white;
+  width: 100%;
+  min-height: 50%;
+  display: block;
+  margin: 0;
+  padding: 0 0 1rem;
+  border-radius: 2px;
+}
+#sign_in,
+#register {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+#guest {
+  width: 100%;
+  text-align: center;
 }

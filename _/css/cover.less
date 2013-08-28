@@ -12,6 +12,24 @@
 @LIGHT_NEUTRAL:rgb(240,245,245);
 @RADIUS:2px;
 
+.SANS {
+	font-family: 'rooney-sans', sans-serif;
+}
+
+.SANS_ITA {
+	font-family: 'rooney-sans', sans-serif;
+	font-style:oblique;
+}
+
+.WEB {
+	font-family: 'rooney-web', sans-serif;
+}
+
+.WEB_ITA {
+	font-family: 'rooney-web', sans-serif;
+	font-style:oblique;
+}
+
 * {
 	margin:0;
 	padding:0;
@@ -75,7 +93,7 @@ form {
 			margin:1rem 0;
 		}
 		button {
-			margin:0.5rem 0.75rem 0;
+			margin:0.5rem 0.75rem 0!important;
 		}
 		p {
 			font-family:"rooney-web";
@@ -121,6 +139,7 @@ label {
 
 input {
 	font-family:"rooney-sans";
+	font-size:0.8rem;
 	&[type="button"] {
 
 	}
@@ -146,7 +165,7 @@ input[type="text"], input[type="password"], textarea {
 		font-style:oblique;
 	}
 	&:focus, &.selected {
-		  box-shadow:inset 0 0 5px #d7e9e9;
+		  box-shadow:inset 0 0 5px @NEUTRAL;
 		  border: 1px solid @NEUTRAL;
 	}
 	&.required {
@@ -161,7 +180,7 @@ textarea {
 }
 
 button {
-	padding:0.5rem 0.75rem;
+	padding:0.5rem 0.75rem!important;
 	border-radius:@RADIUS;
 	border:1px solid @ORANGE;
 	font-family:"rooney-sans";
@@ -627,3 +646,5 @@ select {
 		padding:1rem 0;
 	}
 }
+
+@import url('rsvp.less');
