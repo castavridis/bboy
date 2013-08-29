@@ -845,35 +845,65 @@ input[type="checkbox"] {
   width: 100%;
   text-align: center;
 }
+#tickets .opening {
+  margin-bottom: 0;
+}
+#tickets .body {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#tickets input[type="radio"] {
+  float: left;
+  margin-top: 1.75rem;
+  margin-left: 1rem;
+}
+#tickets input[type="radio"]:checked + label {
+  background-image: -webkit-linear-gradient(top, #ffb769, #ff8f4d);
+  border-top: 1px solid #aebdbc;
+  border-bottom: 1px solid #aebdbc;
+}
+#tickets label {
+  display: block;
+  padding: 1.5rem 1rem 1.5rem 2.5rem;
+  border-bottom: 1px solid #f0f5f5;
+  margin: 0;
+  font-size: 1rem;
+  background-image: -webkit-linear-gradient(top, #ffffff, #fdfaf7);
+}
+#tickets label .description {
+  padding-top: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
 #confirmation {
   text-align: left;
 }
 #confirmation .rsvp {
   display: block;
-  box-shadow: 0 5px 10px 0 rgba(71, 149, 242, 0.5);
+  box-shadow: 0 2px 5px 0 #dce2e2;
 }
 #confirmation .rsvp.event {
   border-top: 3px solid #C2F4FF;
   margin: 1rem 2rem;
 }
 #confirmation .rsvp.event .main {
-  background-color: #0fd4ff;
+  background-color: #9EEEFF;
   padding-bottom: 1.5rem;
   border-left: 2px solid white;
   border-right: 2px solid white;
 }
 #confirmation .rsvp.event .main .divider {
-  color: #C2F4FF;
+  color: white;
 }
 #confirmation .rsvp.event .main .divider .line {
-  border-bottom: 1px dotted #C2F4FF;
-  width: 40%;
+  border-bottom: 1px dotted white;
+  width: 45%;
 }
 #confirmation .rsvp.event .main .divider .line.left {
-  left: 5%;
+  left: 0%;
 }
 #confirmation .rsvp.event .main .divider .line.right {
-  right: 5%;
+  right: 0%;
 }
 #confirmation .rsvp.event h2 {
   text-transform: uppercase;
@@ -881,9 +911,10 @@ input[type="checkbox"] {
   text-align: left;
   font-size: 1rem;
   padding: 1rem 1rem;
-  color: #C2F4FF;
+  color: white;
+  text-shadow: 0 1px 0 #71E0F8;
   margin-bottom: 1rem;
-  border-bottom: 1px dotted #C2F4FF;
+  border-bottom: 1px dotted white;
 }
 #confirmation .rsvp .what {
   font-size: 1.4rem;
@@ -936,6 +967,7 @@ input[type="checkbox"] {
 }
 #confirmation .rsvp .fine_print {
   border-top: 1px dotted #C2F4FF;
+  border-bottom: 2px  solid #C2F4FF;
   background-color: white;
   padding: 1rem 0;
   font-size: 0.6rem;
